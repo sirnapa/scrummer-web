@@ -15,6 +15,15 @@
       <ul class="nav navbar-nav">
         <li>{{#link-to "index"}}Inicio{{/link-to}}</li>
       </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          {{#if session.isAuthenticated}}
+            <a {{action 'invalidateSession'}}>Salir</a>
+          {{else}}
+            {{#link-to 'login'}}Iniciar sesión{{/link-to}}
+          {{/if}}
+        </li>
+      </ul>
     </div><!--/.nav-collapse -->
   </div>
 </nav>

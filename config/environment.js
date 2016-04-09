@@ -28,6 +28,13 @@ module.exports = function(environment) {
 
     // Django REST server
     ENV.APP.API_HOST = 'http://201.217.60.88:8000';
+
+    // Auth
+    ENV['simple-auth'] = {
+      authorizer: 'authorizer:django-rest',
+      serverTokenEndpoint: 'http://201.217.60.88:8000/api-token-auth/',
+      crossOriginWhitelist: ['http://201.217.60.88:8000']
+    };
   }
 
   if (environment === 'test') {

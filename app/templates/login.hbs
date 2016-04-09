@@ -1,0 +1,32 @@
+<br>
+
+<div class="container">
+  <div class="col-md-6 col-md-offset-3">
+    <form {{action 'authenticate' on='submit'}} class="form-horizontal">
+
+      <div class="form-group">
+        <label for="identification" class="control-label col-md-4">Usuario</label>
+        <div class="col-md-8">
+          {{input class='form-control' required='required' id='identification' placeholder='Usuario' value=identification}}
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="password" class="control-label col-md-4">Contraseña</label>
+        <div class="col-md-8">
+          {{input class='form-control' required='required' id='password' placeholder='Contraseña' type='password' value=password}}
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-md-8 col-md-offset-4">
+          <button type="submit" class="btn btn-primary btn-block">Iniciar sesión</button>
+        </div>
+        {{#if errorMessage}}
+          <p>{{errorMessage}}</p>
+        {{/if}}
+      </div>
+
+    </form>
+  </div>
+</div>
