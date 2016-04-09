@@ -1,0 +1,11 @@
+/*
+ * Animacion
+ */
+
+.animacion{
+
+ &.entrada{
+   @include bounceInDown();
+ }
+
+}
