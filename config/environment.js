@@ -25,6 +25,9 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+
+    // Django REST server
+    ENV.APP.API_HOST = 'http://201.217.60.88:8000';
   }
 
   if (environment === 'test') {
@@ -40,7 +43,8 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    // Django REST server
+    ENV.APP.API_HOST = 'http://201.217.60.88:8000';
   }
 
   return ENV;
