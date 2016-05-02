@@ -6,6 +6,7 @@ module.exports = function(environment) {
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
+    host: 'http://192.168.1.132:8080',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -19,6 +20,12 @@ module.exports = function(environment) {
     }
   };
 
+  ENV['ember-simple-auth'] = {
+    authenticationRoute: 'login',
+    routeAfterAuthentication: 'index',
+    routeIfAlreadyAuthenticated: 'index'
+  };
+
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
@@ -27,14 +34,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
 
     // Django REST server
-    ENV.APP.API_HOST = 'http://201.217.60.88:8000';
-
-    // Auth
-    ENV['simple-auth'] = {
-      authorizer: 'authorizer:django-rest',
-      serverTokenEndpoint: 'http://201.217.60.88:8000/api-token-auth/',
-      crossOriginWhitelist: ['http://201.217.60.88:8000']
-    };
+    ENV.APP.API_HOST = 'http://192.168.1.132:8080';
   }
 
   if (environment === 'test') {
