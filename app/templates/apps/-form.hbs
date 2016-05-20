@@ -1,0 +1,11 @@
+{{#em-form action="save" on="submit" submitButton=false}}
+  
+    {{em-input label="Label" property="label" model=model}}
+  
+    {{em-input label="Text" property="text" model=model}}
+  
+    {{em-input label="Done" property="done" model=model}}
+  
+  <button type="submit" class="btn btn-success">Submit</button>
+  {{link-to "Bank list" "banks.index" tagName="button" class="btn btn-primary"}}
+{{/em-form}}

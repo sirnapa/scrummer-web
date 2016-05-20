@@ -1,0 +1,54 @@
+<h1 class="page-header">Apps list</h1>
+
+{{link-to "New App" "apps.new" tagName="button" class="btn btn-primary" }}
+
+{{#if model.length}}
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>
+            Label
+          </th>
+          <th>
+            Text
+          </th>
+          <th>
+            Done
+          </th>
+          <th colspan="3">
+            Actions
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each model as |app|}}
+          <tr>
+            <td>
+              {{app.label}}
+            </td>
+            <td>
+              {{app.text}}
+            </td>
+            <td>
+              {{app.done}}
+            </td>
+            <td>
+              {{link-to "Edit" "apps.edit" app}}
+            </td>
+            <td>
+              {{link-to "Show" "apps.show" app}}
+            </td>
+            <td>
+              <a href="#" {{action "remove" app}}>Remove</a>
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+{{else}}
+  <p id="blankslate">
+    No Apps found
+  </p>
+{{/if}}
