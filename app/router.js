@@ -19,6 +19,17 @@ Router.map(function() {
       path: ':app_id'
     });
   });
+  this.route('permisos', function() {
+    this.route('new');
+
+    this.route('edit', {
+      path: ':permiso_id/edit'
+    });
+
+    this.route('show', {
+      path: ':permiso_id'
+    });
+  });
 });
 
 export default Router;

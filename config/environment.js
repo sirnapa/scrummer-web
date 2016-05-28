@@ -6,7 +6,7 @@ module.exports = function(environment) {
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
-    host: 'http://localhost:8000',
+    host: 'http://172.20.10.10:8000',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -27,7 +27,7 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
-    ENV.host = 'http://localhost:8000';
+    ENV.host = 'http://172.20.10.10:8000';
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
@@ -35,7 +35,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
 
     // Django REST server
-    ENV.APP.API_HOST = 'http://localhost:8000';
+    ENV.APP.API_HOST = 'http://172.20.10.10:8000';
   }
 
   if (environment === 'test') {
