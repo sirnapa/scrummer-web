@@ -1,0 +1,60 @@
+<h1 class="page-header">Proyectos list</h1>
+
+{{link-to "New Proyecto" "proyectos.new" tagName="button" class="btn btn-primary" }}
+
+{{#if model.length}}
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>
+            Nombre
+          </th>
+          <th>
+            Descripcion
+          </th>
+          <th>
+            Fechainicio
+          </th>
+          <th>
+            Fechafin
+          </th>
+          <th colspan="3">
+            Actions
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each model as |proyecto|}}
+          <tr>
+            <td>
+              {{proyecto.nombre}}
+            </td>
+            <td>
+              {{proyecto.descripcion}}
+            </td>
+            <td>
+              {{proyecto.fechaInicio}}
+            </td>
+            <td>
+              {{proyecto.fechaFin}}
+            </td>
+            <td>
+              {{link-to "Edit" "proyectos.edit" proyecto}}
+            </td>
+            <td>
+              {{link-to "Show" "proyectos.show" proyecto}}
+            </td>
+            <td>
+              <a href="#" {{action "remove" proyecto}}>Remove</a>
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+{{else}}
+  <p id="blankslate">
+    No Proyectos found
+  </p>
+{{/if}}

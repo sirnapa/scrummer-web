@@ -1,7 +1,8 @@
-{{#em-form action="save" on="submit" submitButton=false}}
-  
-    {{em-input label="Nombre" property="nombre" model=model}}
-  
+<form {{action 'save' on='submit'}} class="form-horizontal">
+
+  {{input placeholder="Nombre" name="nombre" value=model.nombre}}
+
   <button type="submit" class="btn btn-success">Submit</button>
-  {{link-to "Bank list" "banks.index" tagName="button" class="btn btn-primary"}}
-{{/em-form}}
+  {{link-to "Permisos" "permisos.index" tagName="button" class="btn btn-primary"}}
+
+</form>

@@ -30,6 +30,28 @@ Router.map(function() {
       path: ':permiso_id'
     });
   });
+  this.route('plantilla-de-flujos', function() {
+    this.route('new');
+
+    this.route('edit', {
+      path: ':plantilla-de-flujo_id/edit'
+    });
+
+    this.route('show', {
+      path: ':plantilla-de-flujo_id'
+    });
+  });
+  this.route('proyectos', function() {
+    this.route('new');
+
+    this.route('edit', {
+      path: ':proyecto_id/edit'
+    });
+
+    this.route('show', {
+      path: ':proyecto_id'
+    });
+  });
 });
 
 export default Router;
