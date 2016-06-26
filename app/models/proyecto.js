@@ -1,8 +1,10 @@
-import DS from 'ember-data';
+import Model from 'ember-data/model';
+import attr from 'ember-data/attr';
+// import { belongsTo, hasMany } from 'ember-data/relationships';
 
-export default DS.Model.extend({
-  nombre: DS.attr('string'),
-  descripcion: DS.attr('string'),
-  fechaInicio: DS.attr('date'),
-  fechaFin: DS.attr('date')
+export default Model.extend({
+  nombre: attr('string'),
+  descripcion: attr('string'),
+  fechaInicio: attr('date'),
+  fechaFin: attr('date')
 });

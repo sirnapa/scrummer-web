@@ -1,12 +1,18 @@
-{{link-to "Permiso list" "permisos.index" class="btn btn-primary" }}
+<h1 class="page-header">
+  <span class="pull-right text-muted">{{fa-icon "eye" fixedWidth=true}}</span>
+  {{#link-to "permisos.index" tagName="a" }}{{fa-icon "arrow-left" fixedWidth=true}}{{/link-to}}
+  Permiso
+</h1>
 
-<h1 class="page-heading">Permiso</h1>
-
-
-<div class="panel panel-default">
-  <div class="panel-heading">Nombre:</div>
-  <div class="panel-body">
-    {{model.nombre}}
+<div class="form-horizontal">
+  
+  <div class="form-group">
+    <label class="control-label col-md-4">Nombre</label>
+    <div class="col-md-8">
+      <p class="form-control-static">
+        {{model.nombre}}
+      </p>
+    </div>
   </div>
+  
 </div>
-

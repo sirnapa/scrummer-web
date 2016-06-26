@@ -34,7 +34,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
 
     // Django REST server
-    var host = 'http://10.10.200.102:8000';
+    var host = 'http://10.10.200.23:8000';
     ENV.host = host;
     ENV.APP.API_HOST = host;
   }

@@ -1,2 +1,6 @@
-<h1 class="page-header">Edit Permiso</h1>
+<h1 class="page-header">
+  <span class="pull-right text-muted">{{fa-icon "pencil" fixedWidth=true}}</span>
+  {{#link-to "permisos.index" tagName="a" }}{{fa-icon "arrow-left" fixedWidth=true}}{{/link-to}}
+  Permiso
+</h1>
 {{partial "permisos/form"}}
