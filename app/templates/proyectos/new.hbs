@@ -1,2 +1,7 @@
-<h1 class="page-header">New Proyecto</h1>
+<h1 class="page-header">
+  <span class="pull-right text-muted">{{fa-icon "plus-circle" fixedWidth=true}}</span>
+  {{#link-to "proyectos.index" tagName="a" }}{{fa-icon "arrow-left" fixedWidth=true}}{{/link-to}}
+  Proyecto
+</h1>
+
 {{partial "proyectos/form"}}

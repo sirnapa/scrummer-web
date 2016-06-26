@@ -1,10 +1,12 @@
-<h1 class="page-header">Proyectos list</h1>
+<h1 class="page-header">
+  {{#link-to "proyectos.new" tagName="a" class="pull-right"}}{{fa-icon "plus-circle" fixedWidth=true}}{{/link-to}}
+  Proyectos
+</h1>
 
-{{link-to "New Proyecto" "proyectos.new" tagName="button" class="btn btn-primary" }}
 
 {{#if model.length}}
   <div class="table-responsive">
-    <table class="table table-striped">
+    <table class="table table-bordered table-striped">
       <thead>
         <tr>
           <th>
@@ -39,14 +41,20 @@
             <td>
               {{proyecto.fechaFin}}
             </td>
-            <td>
-              {{link-to "Edit" "proyectos.edit" proyecto}}
+            <td class="text-center">
+              {{#link-to "proyectos.show" proyecto}}
+                {{fa-icon "eye" fixedWidth=true}}
+              {{/link-to}}
             </td>
-            <td>
-              {{link-to "Show" "proyectos.show" proyecto}}
+            <td class="text-center">
+              {{#link-to "proyectos.edit" proyecto}}
+                {{fa-icon "pencil" fixedWidth=true}}
+              {{/link-to}}
             </td>
-            <td>
-              <a href="#" {{action "remove" proyecto}}>Remove</a>
+            <td class="text-center">
+              <a href="#" {{action "remove" proyecto}}>
+                {{fa-icon "times" fixedWidth=true}}
+              </a>
             </td>
           </tr>
         {{/each}}

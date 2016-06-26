@@ -1,33 +1,45 @@
-{{link-to "Proyecto list" "proyectos.index" class="btn btn-primary" }}
+<h1 class="page-header">
+  <span class="pull-right text-muted">{{fa-icon "eye" fixedWidth=true}}</span>
+  {{#link-to "proyectos.index" tagName="a" }}{{fa-icon "arrow-left" fixedWidth=true}}{{/link-to}}
+  Proyecto
+</h1>
 
-<h1 class="page-heading">Proyecto</h1>
+<div class="form-horizontal">
 
-
-<div class="panel panel-default">
-  <div class="panel-heading">Nombre:</div>
-  <div class="panel-body">
-    {{model.nombre}}
+  <div class="form-group">
+    <label class="control-label col-md-4">Nombre</label>
+    <div class="col-md-8">
+      <p class="form-control-static">
+        {{model.nombre}}
+      </p>
+    </div>
   </div>
-</div>
 
-<div class="panel panel-default">
-  <div class="panel-heading">Descripcion:</div>
-  <div class="panel-body">
-    {{model.descripcion}}
+  <div class="form-group">
+    <label class="control-label col-md-4">Descripcion</label>
+    <div class="col-md-8">
+      <p class="form-control-static">
+        {{model.descripcion}}
+      </p>
+    </div>
   </div>
-</div>
 
-<div class="panel panel-default">
-  <div class="panel-heading">Fechainicio:</div>
-  <div class="panel-body">
-    {{model.fechaInicio}}
+  <div class="form-group">
+    <label class="control-label col-md-4">Fechainicio</label>
+    <div class="col-md-8">
+      <p class="form-control-static">
+        {{model.fechaInicio}}
+      </p>
+    </div>
   </div>
-</div>
 
-<div class="panel panel-default">
-  <div class="panel-heading">Fechafin:</div>
-  <div class="panel-body">
-    {{model.fechaFin}}
+  <div class="form-group">
+    <label class="control-label col-md-4">Fechafin</label>
+    <div class="col-md-8">
+      <p class="form-control-static">
+        {{model.fechaFin}}
+      </p>
+    </div>
   </div>
-</div>
 
+</div>
