@@ -1,0 +1,27 @@
+<h1 class="page-header">
+  <span class="pull-right text-muted">{{fa-icon "eye" fixedWidth=true}}</span>
+  {{#link-to "plantilladeflujos.index" tagName="a" }}{{fa-icon "arrow-left" fixedWidth=true}}{{/link-to}}
+  Plantilladeflujo
+</h1>
+
+<div class="form-horizontal">
+  
+  <div class="form-group">
+    <label class="control-label col-md-4">Nombre</label>
+    <div class="col-md-8">
+      <p class="form-control-static">
+        {{model.nombre}}
+      </p>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label class="control-label col-md-4">Actividades</label>
+    <div class="col-md-8">
+      <p class="form-control-static">
+        {{model.actividades}}
+      </p>
+    </div>
+  </div>
+  
+</div>
