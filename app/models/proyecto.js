@@ -5,6 +5,6 @@ import attr from 'ember-data/attr';
 export default Model.extend({
   nombre: attr('string'),
   descripcion: attr('string'),
-  fechaInicio: attr('date'),
-  fechaFin: attr('date')
+  fechainicio: attr('date'),
+  fechafin: attr('date')
 });

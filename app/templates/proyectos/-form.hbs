@@ -1,11 +1,11 @@
 {{#em-form action="save" on="submit"}}
-  
+
     {{em-input label="Nombre" property="nombre" model=model}}
-  
+
     {{em-input label="Descripcion" property="descripcion" model=model}}
-  
-    {{em-input label="Fechainicio" property="fechaInicio" model=model}}
-  
-    {{em-input label="Fechafin" property="fechaFin" model=model}}
-  
+
+    {{em-input-date label="Fecha inicio" property="fechainicio" model=model}}
+
+    {{em-input-date label="Fecha fin" property="fechafin" model=model}}
+
 {{/em-form}}

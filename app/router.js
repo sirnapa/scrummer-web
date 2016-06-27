@@ -41,6 +41,17 @@ Router.map(function() {
       path: ':plantilladeflujo_id'
     });
   });
+  this.route('flujos', function() {
+    this.route('new');
+
+    this.route('edit', {
+      path: ':flujo_id/edit'
+    });
+
+    this.route('show', {
+      path: ':flujo_id'
+    });
+  });
 });
 
 export default Router;
