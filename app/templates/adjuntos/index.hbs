@@ -1,0 +1,55 @@
+<h1 class="page-header">
+  {{#link-to "adjuntos.new" tagName="a" class="pull-right" }}{{fa-icon "plus-circle" fixedWidth=true}}{{/link-to}}
+  Adjuntos
+</h1>
+
+{{#if model.length}}
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>
+            Nombre
+          </th>
+          <th>
+            Archivo
+          </th>
+          <th colspan="3" class="text-center">
+            {{fa-icon "bars" fixedWidth=true}}
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each model as |adjunto|}}
+          <tr>
+            <td>
+              {{adjunto.nombre}}
+            </td>
+            <td>
+              {{adjunto.archivo}}
+            </td>
+            <td class="text-center">
+              {{#link-to "adjuntos.show" adjunto}}
+                {{fa-icon "eye" fixedWidth=true}}
+              {{/link-to}}
+            </td>
+            <td class="text-center">
+              {{#link-to "adjuntos.edit" adjunto}}
+                {{fa-icon "pencil" fixedWidth=true}}
+              {{/link-to}}
+            </td>
+            <td class="text-center">
+              <a href="#" {{action "remove" adjunto}}>
+                {{fa-icon "times" fixedWidth=true}}
+              </a>
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+{{else}}
+  <p id="blankslate">
+    No Adjuntos found
+  </p>
+{{/if}}

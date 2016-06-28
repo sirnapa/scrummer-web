@@ -1,0 +1,85 @@
+<h1 class="page-header">
+  {{#link-to "usuarios.new" tagName="a" class="pull-right" }}{{fa-icon "plus-circle" fixedWidth=true}}{{/link-to}}
+  Usuarios
+</h1>
+
+{{#if model.length}}
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>
+            Username
+          </th>
+          <th>
+            Email
+          </th>
+          <th>
+            Firstname
+          </th>
+          <th>
+            Lastname
+          </th>
+          <th>
+            Estado
+          </th>
+          <th>
+            Createdat
+          </th>
+          <th>
+            Updatedat
+          </th>
+          <th colspan="3" class="text-center">
+            {{fa-icon "bars" fixedWidth=true}}
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each model as |usuario|}}
+          <tr>
+            <td>
+              {{usuario.username}}
+            </td>
+            <td>
+              {{usuario.email}}
+            </td>
+            <td>
+              {{usuario.firstname}}
+            </td>
+            <td>
+              {{usuario.lastname}}
+            </td>
+            <td>
+              {{usuario.estado}}
+            </td>
+            <td>
+              {{usuario.createdat}}
+            </td>
+            <td>
+              {{usuario.updatedat}}
+            </td>
+            <td class="text-center">
+              {{#link-to "usuarios.show" usuario}}
+                {{fa-icon "eye" fixedWidth=true}}
+              {{/link-to}}
+            </td>
+            <td class="text-center">
+              {{#link-to "usuarios.edit" usuario}}
+                {{fa-icon "pencil" fixedWidth=true}}
+              {{/link-to}}
+            </td>
+            <td class="text-center">
+              <a href="#" {{action "remove" usuario}}>
+                {{fa-icon "times" fixedWidth=true}}
+              </a>
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+{{else}}
+  <p id="blankslate">
+    No Usuarios found
+  </p>
+{{/if}}

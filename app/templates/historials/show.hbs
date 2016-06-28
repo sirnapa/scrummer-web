@@ -1,0 +1,27 @@
+<h1 class="page-header">
+  <span class="pull-right text-muted">{{fa-icon "eye" fixedWidth=true}}</span>
+  {{#link-to "historials.index" tagName="a" }}{{fa-icon "arrow-left" fixedWidth=true}}{{/link-to}}
+  Historial
+</h1>
+
+<div class="form-horizontal">
+  
+  <div class="form-group">
+    <label class="control-label col-md-4">Descripcion</label>
+    <div class="col-md-8">
+      <p class="form-control-static">
+        {{model.descripcion}}
+      </p>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label class="control-label col-md-4">Fecha</label>
+    <div class="col-md-8">
+      <p class="form-control-static">
+        {{model.fecha}}
+      </p>
+    </div>
+  </div>
+  
+</div>

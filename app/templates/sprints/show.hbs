@@ -1,0 +1,27 @@
+<h1 class="page-header">
+  <span class="pull-right text-muted">{{fa-icon "eye" fixedWidth=true}}</span>
+  {{#link-to "sprints.index" tagName="a" }}{{fa-icon "arrow-left" fixedWidth=true}}{{/link-to}}
+  Sprint
+</h1>
+
+<div class="form-horizontal">
+  
+  <div class="form-group">
+    <label class="control-label col-md-4">Horashombre</label>
+    <div class="col-md-8">
+      <p class="form-control-static">
+        {{model.horashombre}}
+      </p>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label class="control-label col-md-4">Estado</label>
+    <div class="col-md-8">
+      <p class="form-control-static">
+        {{model.estado}}
+      </p>
+    </div>
+  </div>
+  
+</div>

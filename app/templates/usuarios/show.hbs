@@ -1,0 +1,72 @@
+<h1 class="page-header">
+  <span class="pull-right text-muted">{{fa-icon "eye" fixedWidth=true}}</span>
+  {{#link-to "usuarios.index" tagName="a" }}{{fa-icon "arrow-left" fixedWidth=true}}{{/link-to}}
+  Usuario
+</h1>
+
+<div class="form-horizontal">
+  
+  <div class="form-group">
+    <label class="control-label col-md-4">Username</label>
+    <div class="col-md-8">
+      <p class="form-control-static">
+        {{model.username}}
+      </p>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label class="control-label col-md-4">Email</label>
+    <div class="col-md-8">
+      <p class="form-control-static">
+        {{model.email}}
+      </p>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label class="control-label col-md-4">Firstname</label>
+    <div class="col-md-8">
+      <p class="form-control-static">
+        {{model.firstname}}
+      </p>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label class="control-label col-md-4">Lastname</label>
+    <div class="col-md-8">
+      <p class="form-control-static">
+        {{model.lastname}}
+      </p>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label class="control-label col-md-4">Estado</label>
+    <div class="col-md-8">
+      <p class="form-control-static">
+        {{model.estado}}
+      </p>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label class="control-label col-md-4">Createdat</label>
+    <div class="col-md-8">
+      <p class="form-control-static">
+        {{model.createdat}}
+      </p>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label class="control-label col-md-4">Updatedat</label>
+    <div class="col-md-8">
+      <p class="form-control-static">
+        {{model.updatedat}}
+      </p>
+    </div>
+  </div>
+  
+</div>

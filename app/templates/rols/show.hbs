@@ -1,0 +1,45 @@
+<h1 class="page-header">
+  <span class="pull-right text-muted">{{fa-icon "eye" fixedWidth=true}}</span>
+  {{#link-to "rols.index" tagName="a" }}{{fa-icon "arrow-left" fixedWidth=true}}{{/link-to}}
+  Rol
+</h1>
+
+<div class="form-horizontal">
+  
+  <div class="form-group">
+    <label class="control-label col-md-4">Proyecto</label>
+    <div class="col-md-8">
+      <p class="form-control-static">
+        {{model.proyecto.nombre}}
+      </p>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label class="control-label col-md-4">Nombre</label>
+    <div class="col-md-8">
+      <p class="form-control-static">
+        {{model.nombre}}
+      </p>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label class="control-label col-md-4">Asignado</label>
+    <div class="col-md-8">
+      <p class="form-control-static">
+        {{model.asignado}}
+      </p>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label class="control-label col-md-4">Permisosdelrol</label>
+    <div class="col-md-8">
+      <p class="form-control-static">
+        {{model.permisosdelrol}}
+      </p>
+    </div>
+  </div>
+  
+</div>

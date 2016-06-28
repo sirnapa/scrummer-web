@@ -15,10 +15,17 @@
       <ul class="nav navbar-nav">
         {{#if session.isAuthenticated}}
           <li>{{#link-to "index"}}Inicio{{/link-to}}</li>
+          <li>{{#link-to "usuarios"}}Usuarios{{/link-to}}</li>
           <li>{{#link-to "proyectos"}}Proyectos{{/link-to}}</li>
           <li>{{#link-to "permisos"}}Permisos{{/link-to}}</li>
+          <li>{{#link-to "rols"}}Roles{{/link-to}}</li>
           <li>{{#link-to "plantilladeflujos"}}Plantillas de flujo{{/link-to}}</li>
           <li>{{#link-to "flujos"}}Flujos{{/link-to}}</li>
+          <li>{{#link-to "actividads"}}Actividades{{/link-to}}</li>
+          <li>{{#link-to "sprints"}}Sprints{{/link-to}}</li>
+          <li>{{#link-to "userstories"}}User Stories{{/link-to}}</li>
+          <li>{{#link-to "historials"}}Historiales{{/link-to}}</li>
+          <li>{{#link-to "adjuntos"}}Adjuntos{{/link-to}}</li>
         {{/if}}
       </ul>
       <ul class="nav navbar-nav navbar-right">

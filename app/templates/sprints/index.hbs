@@ -1,0 +1,55 @@
+<h1 class="page-header">
+  {{#link-to "sprints.new" tagName="a" class="pull-right" }}{{fa-icon "plus-circle" fixedWidth=true}}{{/link-to}}
+  Sprints
+</h1>
+
+{{#if model.length}}
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>
+            Horashombre
+          </th>
+          <th>
+            Estado
+          </th>
+          <th colspan="3" class="text-center">
+            {{fa-icon "bars" fixedWidth=true}}
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each model as |sprint|}}
+          <tr>
+            <td>
+              {{sprint.horashombre}}
+            </td>
+            <td>
+              {{sprint.estado}}
+            </td>
+            <td class="text-center">
+              {{#link-to "sprints.show" sprint}}
+                {{fa-icon "eye" fixedWidth=true}}
+              {{/link-to}}
+            </td>
+            <td class="text-center">
+              {{#link-to "sprints.edit" sprint}}
+                {{fa-icon "pencil" fixedWidth=true}}
+              {{/link-to}}
+            </td>
+            <td class="text-center">
+              <a href="#" {{action "remove" sprint}}>
+                {{fa-icon "times" fixedWidth=true}}
+              </a>
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+{{else}}
+  <p id="blankslate">
+    No Sprints found
+  </p>
+{{/if}}

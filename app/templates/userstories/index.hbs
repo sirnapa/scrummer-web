@@ -1,0 +1,97 @@
+<h1 class="page-header">
+  {{#link-to "userstories.new" tagName="a" class="pull-right" }}{{fa-icon "plus-circle" fixedWidth=true}}{{/link-to}}
+  Userstories
+</h1>
+
+{{#if model.length}}
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>
+            Descripcion
+          </th>
+          <th>
+            Usuario
+          </th>
+          <th>
+            Valornegocio
+          </th>
+          <th>
+            Tiempoestimado
+          </th>
+          <th>
+            Tiemporeal
+          </th>
+          <th>
+            Sprint
+          </th>
+          <th>
+            Prioridad
+          </th>
+          <th>
+            Historial
+          </th>
+          <th>
+            Adjunto
+          </th>
+          <th colspan="3" class="text-center">
+            {{fa-icon "bars" fixedWidth=true}}
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each model as |userstory|}}
+          <tr>
+            <td>
+              {{userstory.descripcion}}
+            </td>
+            <td>
+              {{userstory.usuario.user.username}}
+            </td>
+            <td>
+              {{userstory.valornegocio}}
+            </td>
+            <td>
+              {{userstory.tiempoestimado}}
+            </td>
+            <td>
+              {{userstory.tiemporeal}}
+            </td>
+            <td>
+              {{userstory.sprint.estado}}
+            </td>
+            <td>
+              {{userstory.prioridad}}
+            </td>
+            <td>
+              {{userstory.historial.descripcion}}
+            </td>
+            <td>
+              {{userstory.adjunto.nombre}}
+            </td>
+            <td class="text-center">
+              {{#link-to "userstories.show" userstory}}
+                {{fa-icon "eye" fixedWidth=true}}
+              {{/link-to}}
+            </td>
+            <td class="text-center">
+              {{#link-to "userstories.edit" userstory}}
+                {{fa-icon "pencil" fixedWidth=true}}
+              {{/link-to}}
+            </td>
+            <td class="text-center">
+              <a href="#" {{action "remove" userstory}}>
+                {{fa-icon "times" fixedWidth=true}}
+              </a>
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+{{else}}
+  <p id="blankslate">
+    No Userstories found
+  </p>
+{{/if}}

@@ -52,6 +52,83 @@ Router.map(function() {
       path: ':flujo_id'
     });
   });
+  this.route('actividads', function() {
+    this.route('new');
+
+    this.route('edit', {
+      path: ':actividad_id/edit'
+    });
+
+    this.route('show', {
+      path: ':actividad_id'
+    });
+  });
+  this.route('sprints', function() {
+    this.route('new');
+
+    this.route('edit', {
+      path: ':sprint_id/edit'
+    });
+
+    this.route('show', {
+      path: ':sprint_id'
+    });
+  });
+  this.route('historials', function() {
+    this.route('new');
+
+    this.route('edit', {
+      path: ':historial_id/edit'
+    });
+
+    this.route('show', {
+      path: ':historial_id'
+    });
+  });
+  this.route('adjuntos', function() {
+    this.route('new');
+
+    this.route('edit', {
+      path: ':adjunto_id/edit'
+    });
+
+    this.route('show', {
+      path: ':adjunto_id'
+    });
+  });
+  this.route('userstories', function() {
+    this.route('new');
+
+    this.route('edit', {
+      path: ':userstory_id/edit'
+    });
+
+    this.route('show', {
+      path: ':userstory_id'
+    });
+  });
+  this.route('usuarios', function() {
+    this.route('new');
+
+    this.route('edit', {
+      path: ':usuario_id/edit'
+    });
+
+    this.route('show', {
+      path: ':usuario_id'
+    });
+  });
+  this.route('rols', function() {
+    this.route('new');
+
+    this.route('edit', {
+      path: ':rol_id/edit'
+    });
+
+    this.route('show', {
+      path: ':rol_id'
+    });
+  });
 });
 
 export default Router;
