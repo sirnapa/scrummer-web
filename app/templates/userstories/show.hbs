@@ -19,7 +19,7 @@
     <label class="control-label col-md-4">Usuario</label>
     <div class="col-md-8">
       <p class="form-control-static">
-        {{model.usuario}}
+        {{model.usuario.username}}
       </p>
     </div>
   </div>
@@ -55,7 +55,7 @@
     <label class="control-label col-md-4">Sprint</label>
     <div class="col-md-8">
       <p class="form-control-static">
-        {{model.sprint}}
+        {{model.sprint.estado}}
       </p>
     </div>
   </div>
@@ -73,7 +73,7 @@
     <label class="control-label col-md-4">Historial</label>
     <div class="col-md-8">
       <p class="form-control-static">
-        {{model.historial}}
+        {{model.historial.descripcion}}
       </p>
     </div>
   </div>
@@ -82,7 +82,7 @@
     <label class="control-label col-md-4">Adjunto</label>
     <div class="col-md-8">
       <p class="form-control-static">
-        {{model.adjunto}}
+        {{model.adjunto.nombre}}
       </p>
     </div>
   </div>
