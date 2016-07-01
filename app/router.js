@@ -107,17 +107,6 @@ Router.map(function() {
       path: ':userstory_id'
     });
   });
-  this.route('usuarios', function() {
-    this.route('new');
-
-    this.route('edit', {
-      path: ':usuario_id/edit'
-    });
-
-    this.route('show', {
-      path: ':usuario_id'
-    });
-  });
   this.route('rols', function() {
     this.route('new');
 
@@ -127,6 +116,17 @@ Router.map(function() {
 
     this.route('show', {
       path: ':rol_id'
+    });
+  });
+  this.route('usuarios', function() {
+    this.route('new');
+
+    this.route('edit', {
+      path: ':usuario_id/edit'
+    });
+
+    this.route('show', {
+      path: ':usuario_id'
     });
   });
 });
