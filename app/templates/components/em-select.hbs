@@ -1,0 +1,14 @@
+<div class="form-group">
+  <label for="{{property}}" class="control-label col-md-4">{{label}}</label>
+  <div class="col-md-8">
+    {{select-2
+        name=property
+        placeholder=label
+        required=required
+        content=optionEntries
+        optionLabelSelectedPath=contentLabel
+        optionDescriptionPath=contentLabel
+        value=(mut (get model property))
+    }}
+  </div>
+</div>
