@@ -54,8 +54,12 @@ test('create a new usuario', function(assert) {
     fillIn('label:contains(Firstname) input', 'MyString');
     fillIn('label:contains(Lastname) input', 'MyString');
     fillIn('label:contains(Estado) input', false);
+    fillIn('label:contains(Direccion) input', 'MyString');
+    fillIn('label:contains(Telefono) input', 'MyString');
+    fillIn('label:contains(Observacion) input', 'MyString');
     fillIn('label:contains(Createdat) input', new Date());
     fillIn('label:contains(Updatedat) input', new Date());
+    fillIn('label:contains(Rol) input', 'MyString');
 
     click('input:submit');
   });
@@ -79,8 +83,12 @@ test('update an existing usuario', function(assert) {
     fillIn('label:contains(Firstname) input', 'MyString');
     fillIn('label:contains(Lastname) input', 'MyString');
     fillIn('label:contains(Estado) input', false);
+    fillIn('label:contains(Direccion) input', 'MyString');
+    fillIn('label:contains(Telefono) input', 'MyString');
+    fillIn('label:contains(Observacion) input', 'MyString');
     fillIn('label:contains(Createdat) input', new Date());
     fillIn('label:contains(Updatedat) input', new Date());
+    fillIn('label:contains(Rol) input', 'MyString');
 
     click('input:submit');
   });
@@ -104,8 +112,12 @@ test('show an existing usuario', function(assert) {
     assert.equal(find('p strong:contains(Firstname:)').next().text(), 'MyString');
     assert.equal(find('p strong:contains(Lastname:)').next().text(), 'MyString');
     assert.equal(find('p strong:contains(Estado:)').next().text(), false);
+    assert.equal(find('p strong:contains(Direccion:)').next().text(), 'MyString');
+    assert.equal(find('p strong:contains(Telefono:)').next().text(), 'MyString');
+    assert.equal(find('p strong:contains(Observacion:)').next().text(), 'MyString');
     assert.equal(find('p strong:contains(Createdat:)').next().text(), new Date());
     assert.equal(find('p strong:contains(Updatedat:)').next().text(), new Date());
+    assert.equal(find('p strong:contains(Rol:)').next().text(), 'MyString');
   });
 });
 

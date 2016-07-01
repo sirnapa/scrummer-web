@@ -24,10 +24,22 @@
             Estado
           </th>
           <th>
+            Direccion
+          </th>
+          <th>
+            Telefono
+          </th>
+          <th>
+            Observacion
+          </th>
+          <th>
             Createdat
           </th>
           <th>
             Updatedat
+          </th>
+          <th>
+            Rol
           </th>
           <th colspan="3" class="text-center">
             {{fa-icon "bars" fixedWidth=true}}
@@ -53,10 +65,22 @@
               {{usuario.estado}}
             </td>
             <td>
+              {{usuario.direccion}}
+            </td>
+            <td>
+              {{usuario.telefono}}
+            </td>
+            <td>
+              {{usuario.observacion}}
+            </td>
+            <td>
               {{usuario.createdat}}
             </td>
             <td>
               {{usuario.updatedat}}
+            </td>
+            <td>
+              {{usuario.rol.nombre}}
             </td>
             <td class="text-center">
               {{#link-to "usuarios.show" usuario}}

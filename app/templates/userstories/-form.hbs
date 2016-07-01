@@ -2,7 +2,7 @@
   
     {{em-input label="Descripcion" property="descripcion" model=model}}
   
-    {{em-input label="Usuario" property="usuario" model=model}}
+    {{em-select label="Usuario" property="usuario" model=model content="usuario" contentLabel="username"}}
   
     {{em-input label="Valornegocio" property="valornegocio" model=model}}
   
@@ -10,12 +10,12 @@
   
     {{em-input label="Tiemporeal" property="tiemporeal" model=model}}
   
-    {{em-input label="Sprint" property="sprint" model=model}}
+    {{em-select label="Sprint" property="sprint" model=model content="sprint" contentLabel="estado"}}
   
     {{em-input label="Prioridad" property="prioridad" model=model}}
   
-    {{em-input label="Historial" property="historial" model=model}}
+    {{em-select label="Historial" property="historial" model=model content="historial" contentLabel="descripcion"}}
   
-    {{em-input label="Adjunto" property="adjunto" model=model}}
+    {{em-select label="Adjunto" property="adjunto" model=model content="adjunto" contentLabel="nombre"}}
   
 {{/em-form}}
