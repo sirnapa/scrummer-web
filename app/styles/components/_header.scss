@@ -1,0 +1,35 @@
+/*
+ * Header
+ */
+
+.navbar-primary{
+  @extend .navbar-inverse;
+	@include gradient-vertical($start-color: darken($brand-primary,10%), $end-color: $brand-primary);
+  border: none;
+
+  .navbar-toggle{
+    border-color: darken($brand-primary,5%);
+  }
+
+  .navbar-brand{
+    color: $color-blanco;
+  }
+
+  .navbar-nav{
+  	li{
+  		a{
+  			color: $color-blanco;
+
+  			&:hover{
+  				color: $brand-primary;
+          background-color: $color-blanco;
+  			}
+  		}
+  	}
+  }
+}
+
+.page-header{
+	@include text-overflow;
+	border-bottom: none;
+}
