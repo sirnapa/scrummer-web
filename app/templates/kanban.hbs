@@ -39,7 +39,7 @@
                   {{#link-to "actividads.show" actividad class="btn btn-default"}}
                     {{actividad.nombre}}
                   {{/link-to}}
-                  <br>
+                  <br><br>
                 {{/if}}
               {{/each}}
             </td>
@@ -52,6 +52,17 @@
         {{/each}}
         </tr>
       </tbody>
+      <tfoot>
+        <tr>
+          {{#each model.flujos as |flujo|}}
+              <td class="text-center" colspan="3">
+                {{#link-to "actividads.new" (query-params flujo=flujo.id) class="btn"}}
+                  {{fa-icon "plus" fixedWidth=true}}  Agregar
+                {{/link-to}}
+              </td>
+          {{/each}}
+        </tr>
+      </tfoot>
     </table>
   </div>
 {{else}}
