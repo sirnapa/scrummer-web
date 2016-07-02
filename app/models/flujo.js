@@ -4,5 +4,5 @@ import { belongsTo } from 'ember-data/relationships';
 
 export default Model.extend({
   nombre: attr('string'),
-  proyecto: belongsTo('proyecto',{serialize: 'id', deserialize: 'id'})
+  proyecto: belongsTo('proyecto')
 });

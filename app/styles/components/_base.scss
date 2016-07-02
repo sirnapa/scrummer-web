@@ -17,3 +17,7 @@
     }
 
 }
+
+.table-responsive{
+  @include bounceInDown();
+}

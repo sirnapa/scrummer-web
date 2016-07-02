@@ -30,6 +30,7 @@
 }
 
 .page-header{
+  @include bounceInDown();
 	@include text-overflow;
 	border-bottom: none;
 }
