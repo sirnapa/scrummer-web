@@ -1,6 +1,6 @@
 import { moduleFor, test } from 'ember-qunit';
 
-moduleFor('route:proyectos/show/kanban', 'Unit | Route | proyectos/show/kanban', {
+moduleFor('route:kanban', 'Unit | Route | kanban', {
   // Specify the other units that are required for this test.
   // needs: ['controller:foo']
 });

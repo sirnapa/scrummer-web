@@ -1,0 +1,61 @@
+<h1 class="page-header">
+  <span class="pull-right text-muted">{{fa-icon "pencil" fixedWidth=true}}</span>
+  {{#link-to "proyectos.show" proyecto tagName="a" }}{{fa-icon "arrow-left" fixedWidth=true}}{{/link-to}}
+  Kanban
+</h1>
+
+{{#if model.flujos.length}}
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          {{#each model.flujos as |flujo|}}
+            <th colspan="3" class="text-center">
+              {{flujo.nombre}}
+            </th>
+          {{/each}}
+        </tr>
+        <tr>
+          {{#each model.flujos as |flujo|}}
+            <th class="text-center">
+              TO-DO
+            </th>
+            <th class="text-center">
+              Doing
+            </th>
+            <th class="text-center">
+              Done
+            </th>
+          {{/each}}
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+        {{#each model.flujos as |flujo|}}
+            <td>
+              {{#each model.actividades as |actividad|}}
+                {{#if (eq actividad.flujo.id flujo.id)}}
+                  <br>
+                  {{#link-to "actividads.show" actividad class="btn btn-default"}}
+                    {{actividad.nombre}}
+                  {{/link-to}}
+                  <br>
+                {{/if}}
+              {{/each}}
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+        {{/each}}
+        </tr>
+      </tbody>
+    </table>
+  </div>
+{{else}}
+  <p id="blankslate">
+    No se encontraron datos
+  </p>
+{{/if}}

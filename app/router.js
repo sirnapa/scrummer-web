@@ -16,9 +16,7 @@ Router.map(function() {
 
     this.route('show', {
       path: ':proyecto_id'
-    }, function() {
-      this.route('kanban');
-    });
+    }, function() {});
   });
   this.route('permisos', function() {
     this.route('new');
@@ -130,6 +128,7 @@ Router.map(function() {
       path: ':usuario_id'
     });
   });
+  this.route('kanban');
 });
 
 export default Router;
