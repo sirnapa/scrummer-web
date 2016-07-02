@@ -1,5 +1,8 @@
 <h1 class="page-header">
-  {{#link-to "userstories.new" tagName="a" class="pull-right" }}{{fa-icon "plus-circle" fixedWidth=true}}{{/link-to}}
+  {{#link-to "userstories.new" (query-params proyecto=proyecto) tagName="a" class="pull-right" }}{{fa-icon "plus-circle" fixedWidth=true}}{{/link-to}}
+  {{#if proyecto}}
+    {{#link-to "proyectos.show" proyecto tagName="a" }}{{fa-icon "arrow-left" fixedWidth=true}}{{/link-to}}
+  {{/if}}
   Userstories
 </h1>
 
@@ -77,12 +80,12 @@
               {{userstory.adjunto.nombre}}
             </td>
             <td class="text-center">
-              {{#link-to "userstories.show" userstory}}
+              {{#link-to "userstories.show" (query-params proyecto=proyecto) userstory}}
                 {{fa-icon "eye" fixedWidth=true}}
               {{/link-to}}
             </td>
             <td class="text-center">
-              {{#link-to "userstories.edit" userstory}}
+              {{#link-to "userstories.edit" (query-params proyecto=proyecto) userstory}}
                 {{fa-icon "pencil" fixedWidth=true}}
               {{/link-to}}
             </td>

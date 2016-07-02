@@ -1,11 +1,11 @@
 <h1 class="page-header">
   <span class="pull-right text-muted">{{fa-icon "eye" fixedWidth=true}}</span>
-  {{#link-to "userstories.index" tagName="a" }}{{fa-icon "arrow-left" fixedWidth=true}}{{/link-to}}
+  {{#link-to "userstories.index" (query-params proyecto=proyecto) tagName="a" }}{{fa-icon "arrow-left" fixedWidth=true}}{{/link-to}}
   Userstory
 </h1>
 
 <div class="form-horizontal">
-  
+
   <div class="form-group">
     <label class="control-label col-md-4">Descripcion</label>
     <div class="col-md-8">
@@ -14,7 +14,7 @@
       </p>
     </div>
   </div>
-  
+
   <div class="form-group">
     <label class="control-label col-md-4">Usuario</label>
     <div class="col-md-8">
@@ -23,7 +23,7 @@
       </p>
     </div>
   </div>
-  
+
   <div class="form-group">
     <label class="control-label col-md-4">Valornegocio</label>
     <div class="col-md-8">
@@ -32,7 +32,7 @@
       </p>
     </div>
   </div>
-  
+
   <div class="form-group">
     <label class="control-label col-md-4">Tiempoestimado</label>
     <div class="col-md-8">
@@ -41,7 +41,7 @@
       </p>
     </div>
   </div>
-  
+
   <div class="form-group">
     <label class="control-label col-md-4">Tiemporeal</label>
     <div class="col-md-8">
@@ -50,7 +50,7 @@
       </p>
     </div>
   </div>
-  
+
   <div class="form-group">
     <label class="control-label col-md-4">Proyecto</label>
     <div class="col-md-8">
@@ -68,7 +68,7 @@
       </p>
     </div>
   </div>
-  
+
   <div class="form-group">
     <label class="control-label col-md-4">Prioridad</label>
     <div class="col-md-8">
@@ -77,7 +77,7 @@
       </p>
     </div>
   </div>
-  
+
   <div class="form-group">
     <label class="control-label col-md-4">Historial</label>
     <div class="col-md-8">
@@ -86,7 +86,7 @@
       </p>
     </div>
   </div>
-  
+
   <div class="form-group">
     <label class="control-label col-md-4">Adjunto</label>
     <div class="col-md-8">
@@ -95,5 +95,5 @@
       </p>
     </div>
   </div>
-  
+
 </div>
