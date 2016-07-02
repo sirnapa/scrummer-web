@@ -24,7 +24,7 @@ export default JSONAPISerializer.extend({
 
         let data = null;
         if (belongsTo) {
-          data = belongsTo.id
+          data = belongsTo.id;
         }
 
         json.attributes[payloadKey] = data;

@@ -53,7 +53,7 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
     // Django REST server
-    var host = 'http://201.217.60.88:8000';
+    var host = 'http://172.20.10.12:8000';
     ENV.host = host;
     ENV.APP.API_HOST = host;
   }
