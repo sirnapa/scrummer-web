@@ -16,6 +16,8 @@ Router.map(function() {
 
     this.route('show', {
       path: ':proyecto_id'
+    }, function() {
+      this.route('kanban');
     });
   });
   this.route('permisos', function() {
