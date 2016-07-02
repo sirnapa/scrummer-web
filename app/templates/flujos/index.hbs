@@ -1,5 +1,8 @@
 <h1 class="page-header">
-  {{#link-to "flujos.new" tagName="a" class="pull-right" }}{{fa-icon "plus-circle" fixedWidth=true}}{{/link-to}}
+  {{#link-to "flujos.new" (query-params proyecto=proyecto) tagName="a" class="pull-right" }}{{fa-icon "plus-circle" fixedWidth=true}}{{/link-to}}
+  {{#if proyecto}}
+    {{#link-to "proyectos.show" proyecto tagName="a" }}{{fa-icon "arrow-left" fixedWidth=true}}{{/link-to}}
+  {{/if}}
   Flujos
 </h1>
 
@@ -29,12 +32,12 @@
               {{flujo.proyecto.nombre}}
             </td>
             <td class="text-center">
-              {{#link-to "flujos.show" flujo}}
+              {{#link-to "flujos.show" flujo (query-params proyecto=proyecto)}}
                 {{fa-icon "eye" fixedWidth=true}}
               {{/link-to}}
             </td>
             <td class="text-center">
-              {{#link-to "flujos.edit" flujo}}
+              {{#link-to "flujos.edit" flujo (query-params proyecto=proyecto)}}
                 {{fa-icon "pencil" fixedWidth=true}}
               {{/link-to}}
             </td>

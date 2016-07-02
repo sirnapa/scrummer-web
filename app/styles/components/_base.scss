@@ -19,7 +19,8 @@
 }
 
 .table-responsive,
-.form-horizontal{
+.form-horizontal,
+.nav-tabs{
   @include bounceInDown();
 }
 
