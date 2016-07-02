@@ -9,6 +9,9 @@
       <thead>
         <tr>
           <th>
+            Proyecto
+          </th>
+          <th>
             Horashombre
           </th>
           <th>
@@ -22,6 +25,9 @@
       <tbody>
         {{#each model as |sprint|}}
           <tr>
+            <td>
+              {{sprint.proyecto.nombre}}
+            </td>
             <td>
               {{sprint.horashombre}}
             </td>

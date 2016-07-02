@@ -11,5 +11,6 @@ export default Model.extend({
   sprint: belongsTo('sprint'),
   prioridad: attr('string'),
   historial: belongsTo('historial'),
-  adjunto: belongsTo('adjunto')
+  adjunto: belongsTo('adjunto'),
+  proyecto: belongsTo('proyecto')
 });
