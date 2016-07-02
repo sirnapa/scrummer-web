@@ -1,23 +1,23 @@
 {{#em-form action="save" on="submit"}}
-  
+
     {{em-input label="Descripcion" property="descripcion" model=model}}
-  
+
     {{em-select label="Usuario" property="usuario" model=model content="usuario" contentLabel="username"}}
-  
+
     {{em-input label="Valornegocio" property="valornegocio" model=model}}
-  
+
     {{em-input label="Tiempoestimado" property="tiempoestimado" model=model}}
-  
+
     {{em-input label="Tiemporeal" property="tiemporeal" model=model}}
 
     {{em-select label="Proyecto" property="proyecto" model=model content="proyecto" contentLabel="nombre"}}
-  
+
     {{em-select label="Sprint" property="sprint" model=model content="sprint" contentLabel="estado"}}
-  
-    {{em-input label="Prioridad" property="prioridad" model=model}}
-  
+
+    {{em-select label="Prioridad" property="prioridad" model=model staticContent="prioridad"}}
+
     {{em-select label="Historial" property="historial" model=model content="historial" contentLabel="descripcion"}}
-  
+
     {{em-select label="Adjunto" property="adjunto" model=model content="adjunto" contentLabel="nombre"}}
-  
+
 {{/em-form}}

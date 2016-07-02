@@ -80,12 +80,12 @@
               {{userstory.adjunto.nombre}}
             </td>
             <td class="text-center">
-              {{#link-to "userstories.show" (query-params proyecto=proyecto) userstory}}
+              {{#link-to "userstories.show" userstory (query-params proyecto=proyecto)}}
                 {{fa-icon "eye" fixedWidth=true}}
               {{/link-to}}
             </td>
             <td class="text-center">
-              {{#link-to "userstories.edit" (query-params proyecto=proyecto) userstory}}
+              {{#link-to "userstories.edit" userstory (query-params proyecto=proyecto)}}
                 {{fa-icon "pencil" fixedWidth=true}}
               {{/link-to}}
             </td>
