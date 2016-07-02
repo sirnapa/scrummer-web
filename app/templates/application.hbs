@@ -1,5 +1,9 @@
 {{partial "includes/menu"}}
 
 <div class="container">
-  {{outlet}}
+  {{#if session.isAuthenticated}}
+    {{outlet}}
+  {{else}}
+    {{login-form}}
+  {{/if}}
 </div>

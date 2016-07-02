@@ -31,8 +31,6 @@
         <li>
           {{#if session.isAuthenticated}}
             <a href="#" {{action 'invalidateSession'}}>{{fa-icon "sign-out" fixedWidth=true}}</a>
-          {{else}}
-            {{#link-to 'login'}}Iniciar sesión{{/link-to}}
           {{/if}}
         </li>
       </ul>
