@@ -1,5 +1,8 @@
 <h1 class="page-header">
-  {{#link-to "sprints.new" tagName="a" class="pull-right" }}{{fa-icon "plus-circle" fixedWidth=true}}{{/link-to}}
+  {{#link-to "sprints.new" (query-params proyecto=proyecto) tagName="a" class="pull-right" }}{{fa-icon "plus-circle" fixedWidth=true}}{{/link-to}}
+  {{#if proyecto}}
+    {{#link-to "proyectos.show" proyecto tagName="a" }}{{fa-icon "arrow-left" fixedWidth=true}}{{/link-to}}
+  {{/if}}
   Sprints
 </h1>
 
@@ -35,12 +38,12 @@
               {{sprint.estado}}
             </td>
             <td class="text-center">
-              {{#link-to "sprints.show" sprint}}
+              {{#link-to "sprints.show" sprint (query-params proyecto=proyecto)}}
                 {{fa-icon "eye" fixedWidth=true}}
               {{/link-to}}
             </td>
             <td class="text-center">
-              {{#link-to "sprints.edit" sprint}}
+              {{#link-to "sprints.edit" sprint (query-params proyecto=proyecto)}}
                 {{fa-icon "pencil" fixedWidth=true}}
               {{/link-to}}
             </td>

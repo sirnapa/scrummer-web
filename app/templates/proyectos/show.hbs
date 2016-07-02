@@ -6,11 +6,9 @@
 
 <ul class="nav nav-tabs">
   <li role="presentation" class="active"><a href="#">Info</a></li>
-  <li role="presentation">{{#link-to "usuarios"}}Usuarios{{/link-to}}</li>
-  <li role="presentation">{{#link-to "flujos"}}Flujos{{/link-to}}</li>
-  <li role="presentation">{{#link-to "actividads"}}Actividades{{/link-to}}</li>
-  <li role="presentation">{{#link-to "sprints"}}Sprints{{/link-to}}</li>
-  <li role="presentation">{{#link-to "userstories"}}User Stories{{/link-to}}</li>
+  <li role="presentation">{{#link-to "flujos" (query-params proyecto=model.id)}}Flujos{{/link-to}}</li>
+  <li role="presentation">{{#link-to "sprints" (query-params proyecto=model.id)}}Sprints{{/link-to}}</li>
+  <li role="presentation">{{#link-to "userstories" (query-params proyecto=model.id)}}User Stories{{/link-to}}</li>
 </ul>
 
 <div class="form-horizontal">
